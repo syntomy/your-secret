@@ -1,3 +1,14 @@
+.app
+{
+    display:flex;
+    text-align:center;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:70vh;
+    flex-wrap:nowrap;
+}
+
 .app > *
 {
     margin-top:20px;
