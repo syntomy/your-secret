@@ -1,0 +1,81 @@
+body
+{
+    background:#000000;
+    color:white;
+}
+
+.app
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:70vh;
+}
+
+.app > *
+{
+    margin-top:20px;
+}
+
+.typography
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.typography h1
+{
+    font-weight:lighter;
+}
+.typography p
+{
+    color:#323232;
+    font-size:12px;
+}
+
+.header-emphasis
+{
+    color:#FF1E56;
+    font-weight:bold;
+}
+.name-emphasis
+{
+    color:#FF1E56;
+    font-weight:lighter;
+}
+
+#secret-input
+{
+    width:350px;
+    height:200px;
+    border-radius:2px;
+    resize:none;
+    border:1px solid #323232;
+    background: transparent;
+    color:white;
+    padding:5px 20px;
+}
+
+#secret-input::placeholder
+{
+    color:#323232;
+}
+
+#secret-input:focus
+{
+    border:1px solid #FF1E56;
+}
+
+.action-button
+{
+    padding:5px 20px;
+    background:#323232;
+    color:white;
+}
+
+.action-button:active
+{
+    border:1px solid #FF1E56;
+}
