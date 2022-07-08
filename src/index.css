@@ -4,6 +4,16 @@
   outline: none;
 };
 
+.app
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:70vh;
+    flex-wrap:nowrap;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, "Inter", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
