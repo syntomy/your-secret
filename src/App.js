@@ -75,7 +75,6 @@ function App() {
           <div className="typography">
             <h1>Your <span className="header-emphasis">Secret</span></h1>
             <p>Everything you say here is sent anonymously and only <span className="name-emphasis">syntomy</span> can read it</p>
-            <p>If you submitted and nothings happening just wait a bit</p>
           </div>
           <textarea id="secret-input" placeholder="What do you want to say to syntomy..." value={secret} onChange={(e) => setSecret(e.target.value)}></textarea>
           <ReCAPTCHA
