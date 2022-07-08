@@ -2,7 +2,7 @@
 
 * {
   outline: none;
-};
+}
 
 body {
   margin: 0;
@@ -13,9 +13,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #000000;
   color: white;
-};
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-};
+}
