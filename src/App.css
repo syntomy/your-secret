@@ -23,6 +23,7 @@
 .typography h1
 {
     font-weight:lighter;
+    font-size: 33px;
 }
 .typography p
 {
@@ -51,6 +52,7 @@
     background: transparent;
     color:white;
     padding:5px 20px;
+    font-size:12px;
 }
 
 #secret-input::placeholder
@@ -71,6 +73,7 @@
     border-radius:5px;
     font-weight:bold;
     cursor:pointer;
+    font-size:12px;
 }
 
 .action-button:active
@@ -85,6 +88,7 @@
     width:370px;
     align-items:center;
     color: #323232;
+    font-size:15px;
 }
 
 .discord-stuff a
