@@ -4,7 +4,7 @@
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    height:70vh;
+    height:100vh;
 }
 
 .app > *
@@ -47,7 +47,7 @@
 #secret-input
 {
     width:350px;
-    height:200px;
+    min-height:200px;
     border-radius:2px;
     resize:none;
     border:1px solid #323232;
