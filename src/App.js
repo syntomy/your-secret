@@ -3,6 +3,8 @@ import { supabase } from "./supabaseClient";
 import React, { useState } from "react";
 import ReactLoading from "react-loading";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const verifyCaptcha = async (value) => {
   const verifierPath = "https://your-secrets-recaptcha-verification-system.glitch.me/";
@@ -37,7 +39,7 @@ function App() {
       setLoading(true);
       const results = await verifyCaptcha(recaptcha);
       if (results === false || results === undefined || results === null) {
-        alert("Captcha is invalid retry again!");
+        toast.error("Captcha is invalid!");
         setLoading(false);
         return;
       };
@@ -48,17 +50,19 @@ function App() {
       ]);
       if (error) {
         console.log("Something went wrong: " + error.message);
-        alert("Something went wrong with submitting your secret!");
+        toast.error("Something went wrong with submitting your secret!");
         setLoading(false);
       }
       else {
-        alert("Successfully submitted your secret!");
+        toast.success("Successfully submitted your secret!");
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
         console.log("Submitted the secret: " + secret);
-        window.location.reload();
       };
     }
     else {
-      alert("Sorry! The secret can only be more than 3 characters and less than 500 characters");
+      toast.error("You can only send a secret that's more than 3 letters and less than 500");
       setLoading(false);
       console.log("Invalid entry");
     }
@@ -84,6 +88,9 @@ function App() {
             <div className="discord-tag">❤️ syntomy#0007 ❤️</div> | <a href="https://discord.gg/e63S7U9ans" target="_blank">💙 Discord Server 💙</a>
           </div>
         </>}
+        <ToastContainer
+          position="bottom-left"
+        />
     </div>
   );
 }
