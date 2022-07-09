@@ -18,6 +18,7 @@
     align-items:center;
     justify-content:center;
     flex-direction:column;
+    text-align:center;
 }
 .typography h1
 {
@@ -64,12 +65,35 @@
 
 .action-button
 {
-    padding:5px 20px;
+    padding:10px 20px;
     background:#323232;
     color:white;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .action-button:active
 {
     border:1px solid #FF1E56;
+}
+
+.discord-stuff
+{
+    display:flex;
+    justify-content:space-between;
+    width:360px;
+    align-items:center;
+    color: #323232;
+}
+
+.discord-stuff a
+{
+    text-decoration:none;
+    color:white;
+}
+
+.discord-tag
+{
+    color:white;
 }

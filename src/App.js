@@ -77,11 +77,14 @@ function App() {
             <p>Everything you say here is sent anonymously and only <span className="name-emphasis">syntomy</span> can read it</p>
           </div>
           <textarea id="secret-input" placeholder="What do you want to say to syntomy..." value={secret} onChange={(e) => setSecret(e.target.value)}></textarea>
+          <button className="action-button" onClick={submitSecret}>Send your message</button>
           <ReCAPTCHA
             sitekey="6Lc2VtYgAAAAAIoV5XGzIZq3T5OOnCkrUO0FXTbL"
             onChange={(value) => setRecaptcha(value)}
           />
-          <button className="action-button" onClick={submitSecret}>Send your message</button>
+          <div className="discord-stuff">
+            <div className="discord-tag">❤️ syntomy#0007 ❤️</div> | <a href="https://discord.gg/e63S7U9ans" target="_blank">💙 Discord Server 💙</a>
+          </div>
         </>}
     </div>
   );
