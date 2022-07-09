@@ -31,18 +31,16 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const submitSecret = async (e) => {
-    console.log("Verifying captcha...");
-    setLoading(true);
-    const results = await verifyCaptcha(recaptcha);
-    if (results === false || results === undefined || results === null) {
-      alert("Captcha is invalid retry again!");
-      setLoading(false);
-      return;
-    };
-
     console.log("Submitting..");
     if (secret.length > 3 && secret.length < 500) {
+      console.log("Verifying captcha...");
       setLoading(true);
+      const results = await verifyCaptcha(recaptcha);
+      if (results === false || results === undefined || results === null) {
+        alert("Captcha is invalid retry again!");
+        setLoading(false);
+        return;
+      };
       const { error } = await supabase.from("secrets").insert([
         {
           content: secret
