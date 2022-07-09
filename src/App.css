@@ -24,11 +24,13 @@
 {
     font-weight:lighter;
     font-size: 33px;
+    margin-top:20px;
 }
 .typography p
 {
     color:#323232;
     font-size:12px;
+    margin:20px 0px;
 }
 
 .header-emphasis
