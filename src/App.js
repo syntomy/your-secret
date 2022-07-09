@@ -32,8 +32,8 @@ function App() {
 
   const submitSecret = async (e) => {
     console.log("Verifying captcha...");
-    const results = await verifyCaptcha(recaptcha);
     setLoading(true);
+    const results = await verifyCaptcha(recaptcha);
     if (results === false || results === undefined || results === null) {
       alert("Captcha is invalid retry again!");
       setLoading(false);
