@@ -76,6 +76,7 @@
     font-weight:bold;
     cursor:pointer;
     font-size:12px;
+    border:none;
 }
 
 .action-button:active
